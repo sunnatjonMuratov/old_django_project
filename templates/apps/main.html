@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<a href="{% url 'index_view' %}">Product listini korish</a>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category Name</th>
+    </tr>
+    {% for category in products %}
+        <tr>
+            <td>{{ category.pk }}}</td>
+            <td>{{ category.name }}</td>
+            <td>{{ category.price }}</td>
+            <td>{{ category.category.name }}</td>
+        </tr>
+
+    {% endfor %}
+    <form action='{% url 'index_view' %}'>
+        <input type="text" name="search" placeholder="Searching ...">
+        <button type="submit">Izlash</button>
+    </form>
+</table>
+
+</body>
+</html>
