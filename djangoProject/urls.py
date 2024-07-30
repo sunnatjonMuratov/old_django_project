@@ -13,7 +13,6 @@ def send_email(request):
     end = time()
 
     return JsonResponse()
-    
 
 
 urlpatterns = [
