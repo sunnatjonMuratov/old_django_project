@@ -52,6 +52,7 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = 'djangoProject.wsgi.application'
 
 DATABASES = {
